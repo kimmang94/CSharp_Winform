@@ -30,5 +30,23 @@ namespace WindowsFormsApp2
             // 알림창 띄우기
             MessageBox.Show("버튼2를 클릭하였습니다");
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // 선택 알림창 띄우기
+            DialogResult drslt = MessageBox.Show("로그인 하시겠습니까?", "로그인", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+            // 사용자가 확인을 누른경우
+            if (drslt == DialogResult.OK)
+            {
+                MessageBox.Show(textBox1.Text);
+
+                // ID 체크
+                if (textBox1.Text == "asdf")
+                {
+
+                }
+            }
+        }
     }
 }
