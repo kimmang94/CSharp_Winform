@@ -42,9 +42,13 @@ namespace WindowsFormsApp2
                 MessageBox.Show(textBox1.Text);
 
                 // ID 체크
-                if (textBox1.Text == "asdf")
+                if (textBox1.Text.Equals("asdf"))
                 {
-
+                    MessageBox.Show("로그인 되었습니다");
+                }
+                else
+                {
+                    MessageBox.Show("로그인에 실패하였습니다");
                 }
             }
         }
