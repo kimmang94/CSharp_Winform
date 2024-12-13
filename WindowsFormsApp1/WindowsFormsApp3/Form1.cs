@@ -43,6 +43,7 @@ namespace WindowsFormsApp3
                 MessageBox.Show("라디오 버튼1 체크");
                 checkBox1.Checked = true;
                 checkBox1.Enabled = false;
+
             }
         }
     }
