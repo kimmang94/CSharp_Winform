@@ -46,5 +46,18 @@ namespace WindowsFormsApp3
 
             }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            // 일정 시간간격마다 호출 (Timer)
+            if (textBox1.Text.Equals(""))
+            {
+                MessageBox.Show("대기중");
+            }
+            else if (textBox1.Text.Equals("asdf"))
+            {
+                MessageBox.Show("asdf입력!");
+            }
+        }
     }
 }
