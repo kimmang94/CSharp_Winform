@@ -16,5 +16,18 @@ namespace WindowsFormsApp6
         {
             InitializeComponent();
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("버튼1");
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("버튼2");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            button1.Click += new System.EventHandler(this.button2_Click);
+        }
     }
 }
