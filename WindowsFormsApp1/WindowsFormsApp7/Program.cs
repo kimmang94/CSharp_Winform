@@ -19,10 +19,19 @@ namespace WindowsFormsApp7
             bool newForm = false;
             Mutex mutex = new Mutex(true, Assembly.GetEntryAssembly().FullName, out newForm);
 
+            // Mutex 가 이미 생성이 되있는지 체크
+            if (newForm == true)
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+            }
+            else
+            {
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            }
+
+
 
 
         }
