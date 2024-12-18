@@ -18,6 +18,31 @@ namespace WindowsFormsApp9
         }
 
         // 버튼 가져오기
-        private string Label1Text;
+       // private string Label1Text;
+
+        // Getter Setter 제공
+        //public string LabelText1 { get => Label1Text; set => Label1Text = value; }
+
+        //public string GetLabel1Text1()
+        //{
+        //    return Label1Text;
+        //}
+
+        //public void SetLabel1Text1(string value)
+        //{
+        //    Label1Text = value;
+        //}
+
+        public string Label1Text 
+        {
+            get
+            {
+                return this.label1.Text;
+            }
+            set
+            {
+                this.label1.Text = value;
+            }
+        }
     }
 }
