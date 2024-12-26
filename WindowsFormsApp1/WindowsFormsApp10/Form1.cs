@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -14,7 +15,11 @@ namespace WindowsFormsApp10
     public partial class Form1 : Form
     {
         private SqlConnection sqlConn = null;
-        private string connStr = "SERVER=127.0.0.1,9008;DATABASE=MYDB1;UID=sa;PASSWORD=1234";
+        private string connStr = "SERVER=" + ConfigurationManager.AppSettings["IP"] + 
+            ","+ ConfigurationManager.AppSettings["PORT"] + ";" + 
+            "DATABASE="+ ConfigurationManager.AppSettings["DBNAME"] + ";" +
+            "UID=" + ConfigurationManager.AppSettings["USERID"] + ";" +
+            "PASSWORD=" + ConfigurationManager.AppSettings["USERPASSWORD"];
         public Form1()
         {
             InitializeComponent();
