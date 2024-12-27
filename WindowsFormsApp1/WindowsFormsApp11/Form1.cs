@@ -118,7 +118,7 @@ namespace WindowsFormsApp11
                 sqlCommand.Connection = conn;
                 sqlCommand.CommandText = "DELETE FROM BOOKS WHERE BOOKNO = " + "'" + bookNo + "'";
                 sqlCommand.ExecuteNonQuery();
-                //btn4_Click(null, null);
+   
             }
         }
 
@@ -139,8 +139,6 @@ namespace WindowsFormsApp11
                 sqlCommand.Connection = conn;
                 sqlCommand.CommandText = "UPDATE BOOKS SET NAME = " + "'" + bookName + "'" + "WHERE BOOKNO = " + bookNo;
                 sqlCommand.ExecuteNonQuery();
-                
-                //btn5_Click(null, null);
             }
         }
 
@@ -161,7 +159,6 @@ namespace WindowsFormsApp11
                 sqlCommand.CommandText = "INSERT INTO BOOKS(BOOKNO,NAME,CODE) VALUES ( " + bookNo + ", '" + bookName + "','" + bookCode + "')"; 
                 sqlCommand.Connection = conn;
                 sqlCommand.ExecuteNonQuery();
-                //btn5_Click(null, null);
             }
         }
     }
